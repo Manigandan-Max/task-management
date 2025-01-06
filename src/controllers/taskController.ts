@@ -1,8 +1,9 @@
 import { Task } from '../models/Task';
 import { Op } from 'sequelize';
+import { Request, Response } from 'express';
 
 // Create a task
-export const createTask = async (req: any, res: any) => {
+export const createTask = async (req: Request, res: Response) :Promise<any> => {
   try {
     const { title, description, dueDate, status } = req.body;
     const userId = req.user?.userId; // Access the user ID from the JWT payload
@@ -24,8 +25,9 @@ export const createTask = async (req: any, res: any) => {
 };
 
 // Get all tasks
-export const getTasks = async (req: any, res: any) => {
+export const getTasks = async (req: Request, res: Response) :Promise<any> => {
   try {
+  
     const { status, dueDate } = req.body;
     const userId = req.user?.userId; // Access the user ID from the JWT payload
     
@@ -49,7 +51,7 @@ export const getTasks = async (req: any, res: any) => {
 };
 
 // Update a task
-export const updateTask = async (req: any, res: any) => {
+export const updateTask = async (req: Request, res: Response) :Promise<any> => {
   try {
     const { id } = req.params;
     const { title, description, dueDate, status } = req.body;
@@ -74,7 +76,7 @@ export const updateTask = async (req: any, res: any) => {
 };
 
 // Delete a task
-export const deleteTask = async (req: any, res: any) => {
+export const deleteTask = async (req: Request, res: Response) :Promise<any> => {
   try {
     const { id } = req.params;
     const userId = req.user?.userId;
@@ -93,7 +95,7 @@ export const deleteTask = async (req: any, res: any) => {
 };
 
 // Get task status count
-export const getTaskCount = async (req: any, res: any) => {
+export const getTaskCount = async (req: Request, res: Response) :Promise<any> => {
   try {
     const { id } = req.params;
     const { startDate, endDate, status } = req.body;

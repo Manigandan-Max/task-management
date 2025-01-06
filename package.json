@@ -19,7 +19,8 @@
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.11.5",
     "sequelize": "^6.37.5",
-    "winston": "^3.17.0"
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",

@@ -43,6 +43,7 @@ Ensure you have the following installed on your machine:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/Manigandan-Max/task-management.git
+<<<<<<< Updated upstream
    cd task-management
    ```
 
@@ -162,6 +163,8 @@ Ensure you have the following installed on your machine:
 1. **Clone the repository**:
    ```bash
    git clone <repository-url>
+=======
+>>>>>>> Stashed changes
    cd task-management
    ```
 

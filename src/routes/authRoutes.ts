@@ -2,7 +2,7 @@ import { Router } from "express";
 import { register, login } from "../controllers/authController";
 import * as taskController from '../controllers/taskController';
 import { authenticateJWT } from "../middleware/authMiddleware";
-
+//const authenticateJWT = () => { console.log('sd') }
 const router = Router();
 
 router.post('/register', register);

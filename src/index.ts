@@ -1,10 +1,10 @@
-import express from 'express';
+import express, { Request, Response} from 'express';
 import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes';
 import connectToDatabase from './config/db';
 import { initUserModel } from './models/User';
 import { initTaskModel } from './models/Task';
-
+import logger from './helper/logger';
 
 dotenv.config();
 
@@ -14,8 +14,10 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(authRoutes)
 
-app.get('/',(req,res)=>{
-    res.send('NodeJs Running...')
+app.get('/', (req: Request, res: Response) => {
+  logger.info('Hello again --',req);
+  // Logger.info(`POST - ${Utils.getUrl(request)}`)
+  res.send('NodeJs Running...')
 })
 
 // sequelize.sync()
