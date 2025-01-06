@@ -35,16 +35,13 @@ This is a simple **Task Management RESTful API** built with **Node.js** and **Ty
 ## Prerequisites
 
 Ensure you have the following installed on your machine:
-- **Node.js** (>= v14.x)
-- **MySQL**
+•	Node.js (>= v14.x)
+•	MySQL
 
-## Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd task-management
-   ```
+Installation
+    1.Clone the repository:
+    git clone <your-repository-url>
+    cd task-management
 
 2. **Install dependencies**:
    ```bash
